@@ -1,0 +1,260 @@
+.rules{
+	width: 1080px;
+	margin: 0 auto;
+}
+.rules img{
+	width: 100%;
+}
+.rules .rulesTitle span{
+	font-size: 40px;
+	line-height: 40px;
+	display: block;
+	margin: 50px 0 90px;
+	font-weight: bold;
+	color: #222;
+}
+.rules .rulesList{
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+.rules .rulesList .listLeft{
+	width: 240px;
+	margin-right: 60px;
+	float: left;
+}
+.rules .rulesList .listLeft ul li{
+	border-top: 1px solid #dcdcdc;
+	cursor: pointer;
+	text-indent: 18px;
+}
+.rules .rulesList .listLeft ul li.aui-current{
+	background: #f7f7f7;
+}
+.rules .rulesList .listLeft ul li:last-child{
+	border-bottom: 1px solid #dcdcdc;
+}
+.rules .rulesList .listLeft ul li.faqs ul li.faqsList{
+	font-size: 14px;
+	color: #222;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 36px;
+}
+.rules .rulesList .listLeft ul li.faqs ul li.faqsList.active{
+	background: #222222;
+	color: #FFF;
+}
+.rules .rulesList .listLeft ul li.faqs span{
+	position: relative;
+	display: block;
+}
+.rules .rulesList .listLeft ul li.faqs i{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+}
+.rules .rulesList .listLeft ul li.faqs ul{
+	display: none;
+}
+.rules .rulesList .listLeft ul li span{
+	font-size: 14px;
+	height: 58px;
+	line-height: 58px;
+	display: block;
+}
+.rules .rulesList .listLeft ul li span a{
+	display: block;
+}
+.rules .rulesList .listRight{
+	width: 780px;
+	float: left;
+}
+.rules .rulesList .listRight .rightList{
+	display: none;
+}
+.rules .rulesList .listRight .rightList .listDetails .faqsAll{
+	display: none;
+}
+.rules .rulesList .listRight .rightList .listDetails .faqsAll.faqsAct{
+	display: block;
+}
+.rules .rulesList .listRight .rightList h3{
+	font-size: 24px;
+	color: #222;
+	margin-bottom: 30px;
+	font-weight: normal;
+}
+.rules .rulesList .listRight .rightList span{
+	font-size: 14px;
+	color: #888;
+	line-height: 24px;
+	display: block;
+}
+.rules .rulesList .listRight .rightList span.distance{
+	margin-bottom: 20px;
+}
+.rules .rulesList .listRight .rightList .listDetails img{
+	margin-bottom: 30px;
+}
+.rules .rulesList .listRight .rightList .listDetails span.aboutUsText{
+	font-size: 14px;
+	line-height: 18px;
+	color: #888;
+	display: block;
+	margin-bottom: 15px;
+}
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail{
+	overflow: hidden;
+}
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .half{
+	float: left;
+	width: 300px;
+	margin-right: 179px;
+	margin-bottom: 15px;
+}
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .line{
+	margin-bottom: 25px;
+}
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .line input,
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .line textarea{
+	width: 776px;
+	border: 1px solid #dcdcdc;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 10px;
+}
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .half:nth-of-type(2n){
+	margin-right: 0;
+}
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .half span,
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .line span{
+	font-size: 14px;
+	color: #222;
+	display: block;
+	margin-bottom: 2px;
+}
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .line span i{
+	font-style: normal;
+	color: #888;
+}
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .half input,
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .half select{
+	width: 298px;
+	border: 1px solid #dcdcdc;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 10px;
+}
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .line textarea{
+	width: 758px;
+	height: 108px;
+	resize: none;
+	padding: 10px;
+	overflow-x: hidden;
+	line-height: 18px;
+}
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .half input.border,
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .half select.border,
+.rules .rulesList .listRight .rightList .listDetails .tableList .tableDetail .line textarea.border{
+	border: 1px solid #be0000;
+}
+
+.rules .rulesList .listRight .rightList .listDetails .tableList span.rulesSumit{
+	margin: 0 auto;
+	width: 140px;
+	height: 42px;
+	line-height: 42px;
+	color: #FFF;
+	background: #000;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+.rules .rulesList .listRight .rightList .listDetails .orderText .top{
+	font-size: 16px;
+	color: #222;
+	font-weight: normal;
+}
+.rules .rulesList .listRight .rightList .listDetails .orderTable .tableTop{
+	margin-bottom: 15px;
+}
+.rules .rulesList .listRight .rightList .listDetails .orderTable .tableTop span{
+	color: #222;
+}
+.rules .rulesList .listRight .rightList .listDetails .orderTable .tableTop input{
+	width: 300px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #dcdcdc;
+	color: #222;
+	text-indent: 10px;
+}
+.rules .rulesList .listRight .rightList .listDetails .trackOrder{
+	margin: 15px 0 50px;
+}
+.rules .rulesList .listRight .rightList .listDetails .trackOrder span{
+	display: block;
+	width: 140px;
+	height: 40px;
+	line-height: 40px;
+	background: #000;
+	color: #FFF;
+	font-size: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.rules .rulesList .listRight .rightList .listDetails .textBottom p{
+	font-size: 18px;
+	color: #222;
+	margin-bottom: 20px;
+}
+.rules .rulesList .listRight .rightList .listDetails .faqDetails{
+	overflow: hidden;
+	background: #f7f7f7;
+	border-top: 1px solid #e3e3e3;
+	padding: 0 20px;
+}
+.rules .rulesList .listRight .rightList .listDetails .faqDetails:last-of-type{
+	border-bottom: 1px solid #e3e3e3;
+}
+.rules .rulesList .listRight .rightList .listDetails .faqDetails .sliderDetails{
+	padding-bottom: 10px;
+}
+.rules .rulesList .listRight .rightList .listDetails .faqDetails span{
+	font-size: 14px;
+	color: #222;
+	position: relative;
+	cursor: pointer;
+}
+.rules .rulesList .listRight .rightList .listDetails .faqDetails span.faqSlider{
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+}
+.rules .rulesList .listRight .rightList .listDetails .faqDetails span i{
+	position: absolute;
+    top: 0px;
+    right: -15px;
+    width: 30px;
+    text-align: center;
+}
+.rules .rulesList .listRight .rightList .listDetails .faqDetails .sliderDetails span{
+	font-size: 14px;
+	color: #888;
+	padding-bottom: 2px;
+}
+
+
+.totalnull,.totalerror{
+	color: #be0000;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    padding-top: 5px;
+    display: none;
+}

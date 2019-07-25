@@ -1,0 +1,297 @@
+.shopCart{
+	width: 100%;
+}
+.shopCart .topLine{
+	text-align: center;
+	height: 98px;
+	border-bottom: 1px solid #e5e5e5;
+	background: #f5f5f5;
+	line-height: 98px;
+}
+.shopCart .topLine span{
+	font-size: 38px;
+	color: #222;
+}
+.shopCart .shopcart_main{
+	width: 1080px;
+	margin: 50px auto;
+	overflow: hidden;
+	position: relative;
+}
+.shopCart .shopCart_detail{
+	overflow: hidden;
+}
+.shopCart .shopCart_detail .shopCart_left{
+	width: 720px;
+	float: left;
+	margin-right: 40px;
+}
+.shopCart .shopCart_detail .shopCart_left .cart-noitem{
+    padding: 100px 0;
+    text-align: center;
+    line-height: 25px;
+    color: #888;
+    font-size: 14px;
+}
+.shopCart .shopCart_detail .shopCart_left .cart-noitem .shop-btn{
+	margin-top: 30px;
+}
+.shopCart .shopCart_detail .shopCart_left .cart-noitem .shop-btn a{
+    display: block;
+    background: #f6f6f6;
+    width: 140px;
+    margin: 0 auto;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #dcdcdc;
+}
+.shopCart .shopCart_detail .shopCart_left .cart-noitem .shop-btn a:hover{
+	background: #f0f0f0;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_title{
+	height: 47px;
+	line-height: 47px;
+	border-bottom: 2px solid #dcdcdc;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_title span{
+	font-size: 20px;
+	color: #222;
+	text-transform: uppercase;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_title span i{
+	font-style: normal;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list{
+	overflow: hidden;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list>ul{
+	overflow: hidden;
+	padding: 30px 0 18px;
+	border-bottom: 1px solid #dcdcdc;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list ul li{
+	float: left;
+	color: #888;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list>ul li.cart_w1{
+	width: 490px;
+}
+
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul{
+	padding: 30px 0;
+	overflow: hidden;
+	border-bottom: 1px solid #dcdcdc;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul:last-child{
+	border-bottom: none;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_1{
+	width: 118px;
+	margin-right: 20px;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_1 img{
+	width: 100%;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_2{
+	width: 285px;
+	margin-right: 65px;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_2 dl dd:first-of-type{
+	height: 80px;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_2 dl dt a{
+	color: #222;
+    font-size: 16px;
+    width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 22px;
+    display: block;
+	text-decoration: none;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_2 dl dt a:hover{
+	text-decoration: none;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_2 dl dd ul li{
+	float: none;
+	display: block;
+	color: #888;
+	font-size: 14px;
+    line-height: 22px;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_2 dl dd span{
+	color: #222222;
+	font-size: 14px;
+	padding-right: 5px;
+	cursor: pointer;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_2 dl dd ul li span{
+	color: #888;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_2 dl dd span.cart-remove:hover,
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template>ul .cart_w1_2 dl dd span.cart-addwish:hover{
+	border-bottom: 1px solid #222;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list>ul li.cart_w2{
+	width: 125px;
+	text-align: center;
+}
+
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template ul li.cart_w2 .vertical{
+	height: 120px;
+	width: 125px;
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template ul li.cart_w2 input,
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template ul li.cart_w2 button{
+	border: none;
+	background: none;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template ul li.cart_w2 input{
+	font-size: 14px;
+	width: 25px;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template ul li.cart_w2 button{
+	font-size: 14px;
+}
+
+.shopCart .shopCart_detail .shopCart_left .shopCart_list>ul li.cart_w3{
+	width: 105px;
+	text-align: center;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template ul li.cart_w3 .vertical{
+	height: 120px;
+	display: table-cell;
+    vertical-align: middle;
+    text-align: center; 
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template ul li.cart_w3 .vertical span{
+	line-height: 24px;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template ul li.cart_w3 .price{
+    display: block;
+    width: 105px;
+    text-align: center;
+    color: #222;
+}
+.shopCart .shopCart_detail .shopCart_left .shopCart_list .shopcart_template ul li.cart_w3 .old_price{
+	display: block;
+    width: 105px;
+    text-align: center;
+    text-decoration: line-through;
+    color: #888;
+}
+.shopCart .shopCart_detail .shopCart_right{
+	width: 320px;
+	float: left;
+	
+}
+.shopCart .shopCart_detail .shopCart_right .shopCart_title{
+    height: 47px;
+    line-height: 47px;
+}
+.shopCart .shopCart_detail .shopCart_right .shopCart_title span{
+    font-size: 20px;
+    color: #222;
+    text-transform: uppercase;
+}
+.shopCart .shopCart_detail .shopCart_right .right_list{
+	background: #f6f6f6;
+	padding: 35px;
+}
+.shopCart .shopCart_detail .shopCart_right .right_list ul.first li{
+	overflow: hidden;
+	padding-bottom: 15px;
+	font-size: 14px;
+}
+.shopCart .shopCart_detail .shopCart_right .right_list ul.first li span{
+	color: #888;
+}
+.shopCart .shopCart_detail .shopCart_right .right_list ul li span.left{
+	float: left;
+}
+.shopCart .shopCart_detail .shopCart_right .right_list ul li span.right{
+	float: right;
+}
+.shopCart .shopCart_detail .shopCart_right .right_list ul.second{
+	height: 58px;
+	line-height: 58px;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+}
+.shopCart .shopCart_detail .shopCart_right .right_list ul.second li{
+	overflow: hidden;
+	font-size: 14px;
+}
+.shopCart .shopCart_detail .shopCart_right .right_list .settlement span{
+	height: 45px;
+    line-height: 45px;
+    margin-top: 30px;
+    background: #000;
+    color: #FFF;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+.shopCart .shopCart_detail .shopCart_right .right_list .settlement span:hover{
+	background: #444;
+}
+.shopCart .shopcart_main .alsoLike{
+	margin: 20px 0 40px;
+	display: none;
+}
+.shopCart .shopcart_main .alsoLike span.likeTitle{
+    font-size: 20px;
+    color: #222;
+    display: block;
+    height: 82px;
+    line-height: 82px;
+    text-align: center;
+    border-bottom: 2px solid #dcdcdc;
+    margin-bottom: 30px;
+}
+.shopCart .shopcart_main .alsoLike dl{
+	float: left;
+}
+.shopCart .shopcart_main .alsoLike dl dt img{
+	width: 100%;
+}
+.shopCart .shopcart_main .alsoLike dl dd{
+    text-align: center;
+    margin-top: 10px;
+}
+.shopCart .shopcart_main .alsoLike dl dd span.product_name{
+    font-size: 16px;
+    color: #222;
+    text-transform: capitalize;
+    display: block;
+    line-height: 24px;
+    width: 98%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+.shopCart .shopcart_main .alsoLike dl dd .all_price span{
+	display: inline-block;
+	line-height: 24px;
+}
+.shopCart .shopcart_main .alsoLike dl dd .all_price span.sale_price{
+	margin-right: 10px;
+	color: #222;
+}
+.shopCart .shopcart_main .alsoLike dl dd .all_price span.old_price{
+	color: #888;
+	text-decoration: line-through;
+}

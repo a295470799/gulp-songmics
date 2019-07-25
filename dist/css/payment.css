@@ -1,0 +1,767 @@
+.payment{
+	width: 100%;
+	/*position: relative;*/
+}
+.payment .paymentTitle{
+	text-align: center;
+	height: 98px;
+	border-bottom: 1px solid #e5e5e5;
+	background: #f5f5f5;
+	line-height: 98px;
+}
+.payment .paymentTitle span{
+	font-size: 38px;
+	color: #222;
+	text-transform: uppercase;
+}
+.payment .paymentMain{
+	width: 1080px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 50px;
+}
+.payment .paymentMain .scart_step{
+	margin: 60px 0;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+}
+.payment .paymentMain .scart_step.login{
+	margin: 0
+}
+.payment .paymentMain .scart_step span{
+	background: #FFF;
+	color: #888;
+	padding: 0 33px;
+	border: 1px solid #d2d2d2;
+    border-radius: 16px;
+    display: inline-block;
+    margin-right: 90px;
+    position: relative;
+    cursor: pointer;
+}
+.payment .paymentMain .scart_step span:last-child{
+	margin-right: 0;
+}
+.payment .paymentMain .scart_step span.active{
+	background: #000;
+	color: #FFF;
+	border: 1px solid #000;
+}
+.payment .paymentMain .scart_step span .linethrow{
+	position: absolute;
+    width: auto;
+    border: 1px dashed #d2d2d2;
+    right: -83px;
+    top: 14px;
+}
+
+
+.payment .paymentTable{
+	overflow: hidden;
+}
+
+
+.tableLeft{
+	width: 720px;
+	float: left;
+	margin-right: 40px;
+}
+.tableLeft .sign_in{
+	color: #888;
+	background: #f6f6f6;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	padding-left: 16px;
+}
+.tableLeft .sign_in span{
+	cursor: pointer;
+	color: #222;
+}
+.tableLeft .payment_title span{
+	font-size: 20px;
+    border-bottom: 2px solid #dcdcdc;
+    display: block;
+    padding: 15px 0;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.tableLeft .tableList{
+	
+}
+.tableLeft .tableList .shipBill{
+	width: 716px;
+	height: 50px;
+	line-height: 50px;
+	background: #f6f6f6;
+	padding-left: 10px;
+	margin-bottom: 30px;
+    font-size: 14px;
+}
+.tableLeft .tableList .tableDetail{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.tableLeft .tableList .tableDetail .totalnull,
+.tableLeft .tableList .tableDetail .totalerror{
+	color: #be0000;
+	font-size: 14px;
+	height: 14px;
+    line-height: 14px;
+    margin-top: 5px;
+    display: none;
+}
+.tableLeft .tableList .tableDetail span{
+	display: block;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+#address2{
+	margin-top: 20px;
+}
+.tableLeft .tableList .tableDetail input,
+.tableLeft .tableList .tableDetail select{
+	height: 40px;
+	outline: none;
+	text-indent: 12px;
+}
+.tableLeft .tableList .tableDetail .line{
+	width: 720px;
+}
+.tableLeft .tableList .tableDetail .line input{
+	width: 718px;
+	border: 1px solid #dcdcdc;
+	outline: none;
+	color: #222;
+}
+.tableLeft .tableList .tableDetail .half{
+	width: 348px;
+	margin-right: 24px;
+	float: left;
+}
+.tableLeft .tableList .tableDetail .half input,
+.tableLeft .tableList .tableDetail .half select{
+	width: 344px;
+	border: 1px solid #dcdcdc;
+	color: #222;
+}
+.tableLeft .tableList .tableDetail .half:last-child{
+	margin-right: 0;
+}
+.tableLeft .tableList .tableDetail input.border,
+.tableLeft .tableList .tableDetail select.border{
+	border: 1px solid #be0000;
+}
+.tableLeft .back,
+.tableLeft .continue{
+	float: left;
+}
+.tableLeft .back span,
+.tableLeft .continue span{
+	display: inline-block;
+	width: 140px;
+    height: 46px;
+    line-height: 46px;
+    background: #222;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+	margin-right: 20px;
+}
+.payment .paymentMain .tableRight{
+	width: 320px;
+	float: left;
+}
+.payment .paymentMain .tableRight .tableRight_title{
+    padding-bottom: 15px;
+}
+.payment .paymentMain .tableRight .tableRight_title span{
+    font-size: 20px;
+    color: #222;
+    text-transform: uppercase;
+}
+.payment .paymentMain .tableRight .right_list{
+	background: #f6f6f6;
+	padding: 25px;
+}
+.payment .paymentMain .tableRight .right_list ul{
+	padding: 0 5px;
+}
+.payment .paymentMain .tableRight .right_list ul.first li{
+	overflow: hidden;
+	padding-bottom: 15px;
+	font-size: 14px;
+}
+.payment .paymentMain .tableRight .right_list ul.first li.save{
+	display: none;
+}
+.payment .paymentMain .tableRight .right_list ul.first li span{
+	color: #888;
+}
+.payment .paymentMain .tableRight .right_list ul li span.left{
+	float: left;
+}
+.payment .paymentMain .tableRight .right_list ul li span.right{
+	float: right;
+}
+.payment .paymentMain .tableRight .right_list ul.second{
+	height: 58px;
+	line-height: 58px;
+	border-top: 1px solid #dcdcdc;
+	border-bottom: 1px solid #dcdcdc;
+}
+.payment .paymentMain .tableRight .right_list ul.second li{
+	overflow: hidden;
+	font-size: 14px;
+}
+.payment .paymentMain .tableRight .right_list .code{
+	margin-top: 24px;
+}
+.payment .paymentMain .tableRight .right_list .code span.title{
+	display: block;
+	font-size: 14px;
+	color: #222;
+	text-transform: uppercase;
+}
+.payment .paymentMain .tableRight .right_list .code .codeInput{
+	overflow: hidden;
+	margin: 17px 0;
+}
+.payment .paymentMain .tableRight .right_list .code input{
+    margin-right: 14px;
+    width: 178px;
+    border: 1px solid #e5e5e5;
+    height: 34px;
+    float: left;
+    outline: none;
+    text-indent: 10px;
+}
+.payment .paymentMain .tableRight .right_list .code span.apply{
+	background: #222;
+	color: #FFF;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	width: 70px;
+	float: left;
+	font-size: 14px;
+	cursor: pointer;
+}
+.payment .paymentMain .tableRight .right_list .code .applyed{
+	overflow: hidden;
+	margin: 17px 0;
+	display: none;
+}
+.payment .paymentMain .tableRight .right_list .code .code_err{
+	margin-bottom: 10px;
+    color: #be0000;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    display: none;
+}
+.payment .paymentMain .tableRight .right_list .code .applyed span{
+	font-size: 14px;
+}
+.payment .paymentMain .tableRight .right_list .code .applyed span.applyedLeft{
+	color: #888;
+	float: left;
+}
+.payment .paymentMain .tableRight .right_list .code .applyed span.applyedRight{
+	color: #222;
+	float: right;
+	cursor: pointer;
+}
+.payment .paymentMain .tableRight .right_list .code .limitOrder{
+	display: block;
+	font-size: 14px;
+	height: 14px;
+	line-height: 14px;
+	color: #888;
+	margin-bottom: 45px;
+}
+
+/*step2*/
+.payment .paymentTable .tableLeft.billingAddress .billingAddress_check,
+.editAddress .tableLeft .billingAddress_check{
+    height: 50px;
+    line-height: 50px;
+    background: #f6f6f6;
+    text-indent: 18px;
+    margin-bottom: 30px;
+}
+.payment .paymentTable .tableLeft.billingAddress .billingAddress_check span{
+	font-size: 14px;
+}
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    vertical-align:middle;
+    margin-top:0;
+    background:#fff;
+    border: 1px solid #dcdcdc ;
+    height: 14px;
+    width: 14px;
+    outline: none;
+    position: relative;
+    margin: -3px 5px 0 0;
+}
+input[type="checkbox"]:checked {
+    background: #FFF;
+    border: 1px solid #222;
+}
+input[type=checkbox]:checked::after{
+    content: '\e649';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    font-size: 16px;
+    
+}
+
+
+/*step3*/
+.payment .paymentTable .reviewOrder .paymentMethod p{
+	font-size: 16px;
+    line-height: 16px;
+    color: #888;
+    padding: 0 0 17px 10px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.payment .paymentTable .reviewOrder .paymentMethod .paypal{
+    height: 58px;
+    line-height: 58px;
+    border: 1px solid #dcdcdc;
+    padding-left: 22px;
+    margin-left: 5px;
+    margin-bottom: 15px;
+}
+.payment .paymentTable .reviewOrder .paymentMethod .paypal:hover{
+	border: 1px solid #222;
+}
+.payment .paymentTable .reviewOrder .paymentMethod .paypal.err,
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .addressDetail.border{
+	border: 2px solid #be0000;
+}
+.payment .paymentTable .reviewOrder .paymentMethod .paypal input{
+	margin-right: 15px;
+}
+.payment .paymentTable .reviewOrder .paymentMethod .paypal img{
+    vertical-align: middle;
+    margin-left: 120px;
+}
+.payment .paymentTable .reviewOrder .paymentMethod .paymentTotal{
+	margin-bottom: 60px;
+	padding-left: 5px;
+}
+.payment .paymentTable .reviewOrder .paymentMethod .paymentTotal span{
+	display: block;
+	color: #888;
+    font-size: 14px;
+    line-height: 24px;
+}
+.payment .paymentTable .reviewOrder .addressEdit>ul>li{
+	margin-bottom: 30px;
+}
+.payment .paymentTable .reviewOrder .addressEdit .no-address{
+	height: 55px;
+    line-height: 55px;
+    font-size: 14px;
+    color: #888;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress{
+	
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .addressTittle{
+	overflow: hidden;
+	padding: 0 10px;
+    padding-bottom: 15px;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .addressTittle span:last-child{
+	float: right;
+	font-size: 14px;
+	display: block;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .addressTittle span:first-child{
+	float: left;
+	font-size: 16px;
+	display: block;
+	color: #888;
+	text-decoration: none;
+	cursor: auto;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .addressTittle span{
+	color: #222;
+	cursor: pointer;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .addressTittle span:hover{
+	border-bottom: 1px solid #222;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .addressDetail,
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail{
+	background: #f6f6f6;
+	padding: 20px 20px 25px;
+	border-top: 1px solid #dcdcdc;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .addressDetail ul li{
+	font-size: 14px;
+	color: #222;
+	line-height: 24px;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li{
+	overflow: hidden;
+	border-bottom: 1px solid #dcdcdc;
+	padding: 20px 0;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li:first-child{
+	padding-top: 10px;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li:last-child{
+	border-bottom: none;
+	padding-bottom: 10px;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li .orderDetail_left{
+	float: left;
+	margin-right: 20px;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li .orderDetail_left img{
+	width: 120px;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li .orderDetail_right{
+	float: left;
+	width: 530px;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li .orderDetail_right span{
+	display: block;
+	line-height: 24px;
+	color: #222;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li .orderDetail_right span i{
+	font-size: 14px;
+	font-style: normal;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li .orderDetail_right span.product_name{
+	font-size: 14px;
+	width: 530px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li .orderDetail_right span.sku,
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li .orderDetail_right span.color,
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li .orderDetail_right span.quantity{
+	font-size: 14px;
+	color: #888;
+}
+.payment .paymentTable .reviewOrder .addressEdit ul li .stepAddress .orderDetail ul li .orderDetail_right span.price{
+	font-size: 14px;
+}
+.payment .paymentMain .paymentTable .tableRight .right_list .continue{
+	width: 100%;
+    height: 46px;
+    line-height: 46px;
+    background: #222;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.payment .paymentMain .paymentTable .tableRight .right_list .agreement span{
+	font-size: 14px;
+	color: #888;
+	line-height: 20px;
+}
+.payment .paymentMain .paymentTable .tableRight .right_list .agreement span a{
+	color: #222;
+}
+.payment .paymentMain .paymentTable .tableRight .right_list .agreement span a:hover{
+	border-bottom: 1px solid #222;
+}
+.payment .paymentMain .paymentTable .tableRight .right_list .agreement_check{
+	margin-top: 20px;
+}
+.payment .paymentMain .paymentTable .tableRight .right_list .agreement_check span{
+	font-size: 14px;
+	color: #888;
+}
+
+/*编辑地址弹窗*/
+.editAddress,
+.shippingEditAddress,
+.billingEditAddress{
+	position: fixed;
+    background: #FFF;
+    width: 720px;
+    height: 810px;
+    margin:auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 112;
+    overflow: auto;
+    padding: 0 50px;
+    display: none;
+}
+@media (min-height: 902px){
+	.editAddress,
+	.shippingEditAddress,
+	.billingEditAddress{
+		height: 810px;
+	}
+}
+@media (max-height: 901px){
+	.editAddress,
+	.shippingEditAddress,
+	.billingEditAddress{
+		height: 650px;
+	}
+}
+@media (max-height: 769px) {
+	.editAddress,
+	.shippingEditAddress,
+	.billingEditAddress{
+		height: 560px;
+	}
+}
+.editAddress .tableLeft .payment_title span,
+.shippingEditAddress .tableLeft .payment_title span,
+.billingAddress .tableLeft .payment_title span{
+	padding-top: 0;
+	text-transform: uppercase;
+}
+.editAddress .tableLeft .payment_title span{
+	margin-top: 35px;
+}
+.editAddress .tableLeft .continue.billing,
+.editAddress .tableLeft .continue.shipping{
+	margin: 15px auto 40px;
+    width: 100%;
+    text-align: center;
+}
+.editAddress .close,
+.shippingEditAddress .close,
+.billingAddress .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.editAddress .tableLeft,
+.shippingEditAddress .tableLeft,
+.billingAddress .tableLeft{
+	width:720px;
+	margin-right: 0;
+}
+.editAddress .tableLeft .payment_title,
+.shippingEditAddress .tableLeft .payment_title,
+.billingAddress .tableLeft .payment_title{
+	margin-top: 35px;
+}
+.editAddress .tableLeft .continue,
+.shippingEditAddress .tableLeft .continue,
+.billingAddress .tableLeft .continue{
+	margin: 0 auto 35px;
+	width: 140px;
+    height: 46px;
+}
+.editAddress .tableLeft .editSelect,
+.shippingEditAddress .tableLeft .editSelect,
+.billingAddress .tableLeft .editSelect{
+	position: relative;
+	margin-bottom: 20px;
+	height: 62px;
+	padding-top: 20px;
+    background: #f6f6f6;
+}
+#select_more{
+	height: 38px;
+    width: 680px;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+.editAddress .tableLeft .editSelect span,
+.shippingEditAddress .tableLeft .editSelect span,
+.billingAddress .tableLeft .editSelect span{
+	width:678px;
+	margin: 0 auto;
+    border: 1px solid #dcdcdc;
+    height: 40px;
+    line-height: 40px;
+    /* 右侧添加小箭头的背景图 */
+    background: url(../img/select.png) #FFF no-repeat;
+    background-position: 650px 12px;
+    text-indent: 10px;
+    display: block;
+    cursor: pointer;
+}
+.editAddress .tableLeft .editSelect ul,
+.shippingEditAddress .tableLeft .editSelect ul,
+.billingAddress .tableLeft .editSelect ul{
+	display: none;
+	border: 1px solid #dcdcdc;
+    width: 678px;
+    margin: 0 auto;
+    background: #FFF;
+}
+.editAddress .tableLeft .editSelect ul li,
+.shippingEditAddress .tableLeft .editSelect ul li,
+.billingAddress .tableLeft .editSelect ul li{
+	padding-left: 10px;
+	font-size: 14px;
+	line-height: 28px;
+	color: #888;
+	cursor: pointer;
+}
+.editAddress .tableLeft .editSelect ul li:hover,
+.shippingEditAddress .tableLeft .editSelect ul li:hover,
+.billingAddress .tableLeft .editSelect ul li:hover{
+	color: #222;
+}
+
+.totalnull,
+.totalerror{
+	display: none;
+}
+.paymentSuccess{
+	width: 1080px;
+	margin: 0 auto;
+}
+.paymentSuccess .successText{
+	padding: 100px 0;
+	border-bottom: 1px solid #dcdcdc;
+}
+.paymentSuccess .successText span{
+	display: block;
+}
+.paymentSuccess .successText span i{
+	font-style: normal;
+}
+.paymentSuccess .successText span a{
+	color: #222;
+	text-decoration: none;
+}
+.paymentSuccess .successText span.text1{
+    font-size: 40px;
+    color: #222;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.paymentSuccess .successText span.text2{
+	font-size: 16px;
+    color: #222;
+    line-height: 30px;
+}
+.paymentSuccess .successText span.text3,
+.paymentSuccess .successText span.text4{
+	font-size: 14px;
+    color: #888;
+    line-height: 30px;
+}
+.paymentSuccess .nextTime{
+	overflow: hidden;
+	margin-bottom: 185px;
+}
+.paymentSuccess .nextTime span.title{
+	font-size: 16px;
+	color: #222222;
+	display: block;
+	margin: 20px 0;
+}
+.paymentSuccess .nextTime .create,
+.paymentSuccess .nextTime .confirm,
+.paymentSuccess .nextTime .sumit{
+	width: 200px;
+	float: left;
+	margin-right: 20px;
+}
+.paymentSuccess .nextTime span.top{
+	color: #888;
+	font-size: 14px;
+	height: 34px;
+	line-height: 34px;
+	display: block;
+}
+.paymentSuccess .nextTime input{
+	height: 34px;
+	line-height: 34px;
+	text-indent: 5px;
+	border: 1px solid #dcdcdc;
+	width: 198px;
+}
+.paymentSuccess .nextTime span.creatAccount{
+	height: 34px;
+	line-height: 34px;
+	border: 1px solid #dcdcdc;
+	display: block;
+	width: 158px;
+	text-align: center;
+    font-size: 14px;
+	background: #f6f6f6;
+	cursor: pointer;
+}
+.paymentSuccess .nextTime span.creatAccount:hover{
+	background: #f0f0f0;
+}
+.paymentSuccess .nextTime .errorMes{
+	color: #be0000;
+	font-size: 14px;
+	line-height: 18px;
+}
+.paymentSuccess .alsoLike{
+	overflow: hidden;
+    margin-bottom: 80px;
+    display: none;
+}
+.paymentSuccess .alsoLike h2{
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 30px;
+    margin-bottom: 54px;
+    border-bottom: 2px solid #dcdcdc;
+    text-align: center;
+    font-weight: bold;
+}
+.paymentSuccess .alsoLike dl{
+    float: left;
+    width: 250px;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+.paymentSuccess .alsoLike dl:nth-child(4n){
+	margin-right: 0;
+}
+.paymentSuccess .alsoLike dl dt{
+	margin-bottom: 25px;
+}
+.paymentSuccess .alsoLike dl dt img{
+	width: 100%;
+}
+.paymentSuccess .alsoLike dl dd{
+	    text-align: center;
+}
+.paymentSuccess .alsoLike dl dd .product_name{
+    margin-bottom: 10px;
+    display: block;
+    color: #313131;
+    font-size: 16px;
+    line-height: 16px;
+    width:100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.paymentSuccess .alsoLike dl dd .price .sale_price{
+    color: #222;
+    margin-right: 10px;
+}
+.paymentSuccess .alsoLike dl dd .price .old_price{
+    color: #888;
+    text-decoration: line-through;
+    font-style: normal;
+}
