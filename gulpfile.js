@@ -3,6 +3,7 @@ const
     mincss = require('gulp-clean-css'),
     uglify = require('gulp-uglify'),
     babel = require('gulp-babel'),
+    watch = require('gulp-watch'),
     path  = require('path');
 
 //使用说明：
@@ -21,11 +22,11 @@ function forJs(client){
     }
 }
 
-function forWatchJs(path, element, client){
+function forWatchJs(path, element){
     gulp.src(path)
         .pipe(babel())
         .pipe(uglify())
-        .pipe(gulp.dest(`${_path}${element}/public/static/${client}/js/minify`));
+        .pipe(gulp.dest(`${element}\\minify`));
 }
 
 function forCss(client){
@@ -44,10 +45,10 @@ function forCss(client){
     }
 }
 
-function forWatchCss(path, element, client){
+function forWatchCss(path, element){
     gulp.src(path)
         .pipe(mincss())
-        .pipe(gulp.dest(`${_path}${element}/public/static/${client}/css/minify`));
+        .pipe(gulp.dest(`${element}\\minify`));
 }
 
 gulp.task('js', () =>{
@@ -72,54 +73,44 @@ gulp.task("default", () => {
     for (var i = 0; i < _sites.length; i++) {
         var element = _sites[i];
 
-        gulp.watch(`${_path}${element}/public/static/web/js/*.js`, function(event){
-            forWatchJs(event.path, element, 'web');
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        watch(`${_path}${element}/public/static/web/js/*.js`, function(event){
+            forWatchJs(event.path, event.dirname);
+            console.log('File ' + event.path + ' was modified, running tasks...');
         });
 
-        gulp.watch(`${_path}${element}/public/static/web/css/*.css`, function(event){
-            forWatchCss(event.path, element, 'web');
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        watch(`${_path}${element}/public/static/web/css/*.css`, function(event){
+            forWatchCss(event.path, event.dirname);
+            console.log('File ' + event.path + ' was modified, running tasks...');
         });
 
-        gulp.watch(`${_path}${element}/public/static/web/js/giveaways/*.js`, function(event){
-            forWatchJs(event.path, element, 'web');
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        watch(`${_path}${element}/public/static/web/css/giveaways/*.css`, function(event){
+            forWatchCss(event.path, event.dirname.replace("\\giveaways", ""));
+            console.log('File ' + event.path + ' was modified, running tasks...');
         });
 
-        gulp.watch(`${_path}${element}/public/static/web/css/giveaways/*.css`, function(event){
-            forWatchCss(event.path, element, 'web');
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        watch(`${_path}${element}/public/static/web/css/subject/*.css`, function(event){
+            forWatchCss(event.path, event.dirname.replace("\\subject", ""));
+            console.log('File ' + event.path + ' was modified, running tasks...');
         });
 
-        gulp.watch(`${_path}${element}/public/static/web/css/subject/*.css`, function(event){
-            forWatchCss(event.path, element, 'web');
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        watch(`${_path}${element}/public/static/m/js/*.js`, function(event){
+            forWatchJs(event.path, event.dirname);
+            console.log('File ' + event.path + ' was modified, running tasks...');
         });
 
-        gulp.watch(`${_path}${element}/public/static/m/js/*.js`, function(event){
-            forWatchJs(event.path, element, 'm');
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        watch(`${_path}${element}/public/static/m/css/*.css`, function(event){
+            forWatchCss(event.path, event.dirname);
+            console.log('File ' + event.path + ' was modified, running tasks...');
         });
 
-        gulp.watch(`${_path}${element}/public/static/m/css/*.css`, function(event){
-            forWatchCss(event.path, element, 'm');
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        watch(`${_path}${element}/public/static/m/css/giveaways/*.css`, function(event){
+            forWatchCss(event.path, event.dirname.replace("\\giveaways", ""));
+            console.log('File ' + event.path + ' was modified, running tasks...');
         });
 
-        gulp.watch(`${_path}${element}/public/static/m/js/giveaways/*.js`, function(event){
-            forWatchJs(event.path, element, 'm');
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-        });
-
-        gulp.watch(`${_path}${element}/public/static/m/css/giveaways/*.css`, function(event){
-            forWatchCss(event.path, element, 'm');
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-        });
-
-        gulp.watch(`${_path}${element}/public/static/m/css/subject/*.css`, function(event){
-            forWatchCss(event.path, element, 'm');
-            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        watch(`${_path}${element}/public/static/m/css/subject/*.css`, function(event){
+            forWatchCss(event.path, event.dirname.replace("\\subject", ""));
+            console.log('File ' + event.path + ' was modified, running tasks...');
         });
 
     }
