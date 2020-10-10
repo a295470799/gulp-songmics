@@ -1,99 +1,126 @@
-const gulp = require('gulp');
-const mincss = require('gulp-minify-css');
-const uglify = require('gulp-uglify');
-const babel = require('gulp-babel');
-var path  = require('path');
+const 
+    gulp = require('gulp'),
+    mincss = require('gulp-clean-css'),
+    uglify = require('gulp-uglify'),
+    babel = require('gulp-babel'),
+    path  = require('path');
 
 //使用说明：
 //1._path路径默认为项目所在盘的根目录（D:/   E:/）
-//2.sites为项目目录集合
+//2._sites为项目目录集合
 
-var _path = path.resolve(__dirname, '..') + "/";
-var sites = ["songmics_us","songmics_uk","songmics_fr"];
+const _path = path.resolve(__dirname, '..') + '/';
+const _sites = ["songmics_us","songmics_uk","songmics_fr","songmics_es","songmics_it","songmics_de","songmics_jp"];
 
-
-gulp.task('js',function(){
-    for (var index = 0; index < sites.length; index++) {
-        var element = sites[index];
-
-        gulp.src(_path + element +"/public/static/web/js/*.js")
+function forJs(client){
+    for (var i = 0; i < _sites.length; i++) {
+        gulp.src(`${_path}${_sites[i]}/public/static/${client}/js/*.js`)
             .pipe(babel())
             .pipe(uglify())
-            .pipe(gulp.dest(_path + element +"/public/static/web/js/minify"));
-    
-        gulp.src(_path + element +"/public/static/web/js/giveaways/*.js")
-            .pipe(babel())
-            .pipe(uglify())
-            .pipe(gulp.dest(_path + element +"/public/static/web/js/minify"));
+            .pipe(gulp.dest(`${_path}${_sites[i]}/public/static/${client}/js/minify`));
     }
-})
+}
 
-gulp.task('css',function(){
-    for (var index = 0; index < sites.length; index++) {
-        var element = sites[index];
+function forWatchJs(path, element, client){
+    gulp.src(path)
+        .pipe(babel())
+        .pipe(uglify())
+        .pipe(gulp.dest(`${_path}${element}/public/static/${client}/js/minify`));
+}
 
-        gulp.src(_path + element +"/public/static/web/css/*.css")
+function forCss(client){
+    for (var i = 0; i < _sites.length; i++) {
+        gulp.src(`${_path}${_sites[i]}/public/static/${client}/css/*.css`)
             .pipe(mincss())
-            .pipe(gulp.dest(_path + element +"/public/static/web/css/minify"));
-
-        gulp.src(_path + element +"/public/static/web/css/giveaways/*.css")
-            .pipe(mincss())
-            .pipe(gulp.dest(_path + element +"/public/static/web/css/minify"));
-
-        gulp.src(_path + element +"/public/static/web/css/subject/*.css")
-            .pipe(mincss())
-            .pipe(gulp.dest(_path + element +"/public/static/web/css/minify"));
+            .pipe(gulp.dest(`${_path}${_sites[i]}/public/static/${client}/css/minify`));
         
+        gulp.src(`${_path}${_sites[i]}/public/static/${client}/css/giveaways/*.css`)
+            .pipe(mincss())
+            .pipe(gulp.dest(`${_path}${_sites[i]}/public/static/${client}/css/minify`));
+
+        gulp.src(`${_path}${_sites[i]}/public/static/${client}/css/subject/*.css`)
+            .pipe(mincss())
+            .pipe(gulp.dest(`${_path}${_sites[i]}/public/static/${client}/css/minify`));
     }
+}
+
+function forWatchCss(path, element, client){
+    gulp.src(path)
+        .pipe(mincss())
+        .pipe(gulp.dest(`${_path}${element}/public/static/${client}/css/minify`));
+}
+
+gulp.task('js', () =>{
+    forJs('web');
 })
 
-gulp.task('m-js',function(){
-    for (var index = 0; index < sites.length; index++) {
-        var element = sites[index];
-
-        gulp.src(_path + element +"/public/static/m/js/*.js")
-            .pipe(babel())
-            .pipe(uglify())
-            .pipe(gulp.dest(_path + element +"/public/static/m/js/minify"));
-
-        gulp.src(_path + element +"/public/static/m/js/giveaways/*.js")
-            .pipe(babel())
-            .pipe(uglify())
-            .pipe(gulp.dest(_path + element +"/public/static/m/js/minify"));
-    }
+gulp.task('css', () =>{
+    forCss('web');
 })
 
-gulp.task('m-css',function(){
-    for (var index = 0; index < sites.length; index++) {
-        var element = sites[index];
-
-        gulp.src(_path + element +"/public/static/m/css/*.css")
-            .pipe(mincss())
-            .pipe(gulp.dest(_path + element +"/public/static/m/css/minify"));
-
-        gulp.src(_path + element +"/public/static/m/css/giveaways/*.css")
-            .pipe(mincss())
-            .pipe(gulp.dest(_path + element +"/public/static/m/css/minify"));
-        
-        gulp.src(_path + element +"/public/static/m/css/subject/*.css")
-            .pipe(mincss())
-            .pipe(gulp.dest(_path + element +"/public/static/m/css/minify"));
-    }
+gulp.task('m-js', () =>{
+    forJs('m');
 })
 
-gulp.task("default", function () {
-    for (var index = 0; index < sites.length; index++) {
-        var element = sites[index];
+gulp.task('m-css', () =>{
+    forCss('m');
+})
 
-        gulp.watch(_path + element +"/public/static/web/js/*.js", ["js"]);
-        gulp.watch(_path + element +"/public/static/web/css/*.css", ["css"])
-        gulp.watch(_path + element +"/public/static/web/js/giveaways/*.js", ["js"]);
-        gulp.watch(_path + element +"/public/static/web/css/giveaways/*.css", ["css"]);
-        gulp.watch(_path + element +"/public/static/web/css/subject/*.css", ["css"])
-        gulp.watch(_path + element +"/public/static/m/js/*.js", ["m-js"]);
-        gulp.watch(_path + element +"/public/static/m/css/*.css", ["m-css"])
-        gulp.watch(_path + element +"/public/static/m/js/giveaways/*.js", ["m-js"]);
-        gulp.watch(_path + element +"/public/static/m/css/giveaways/*.css", ["m-css"])
-        gulp.watch(_path + element +"/public/static/m/css/subject/*.css", ["m-css"])
+gulp.task('build',['js','css','m-js','m-css']);
+
+gulp.task("default", () => {
+    for (var i = 0; i < _sites.length; i++) {
+        var element = _sites[i];
+
+        gulp.watch(`${_path}${element}/public/static/web/js/*.js`, function(event){
+            forWatchJs(event.path, element, 'web');
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+
+        gulp.watch(`${_path}${element}/public/static/web/css/*.css`, function(event){
+            forWatchCss(event.path, element, 'web');
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+
+        gulp.watch(`${_path}${element}/public/static/web/js/giveaways/*.js`, function(event){
+            forWatchJs(event.path, element, 'web');
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+
+        gulp.watch(`${_path}${element}/public/static/web/css/giveaways/*.css`, function(event){
+            forWatchCss(event.path, element, 'web');
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+
+        gulp.watch(`${_path}${element}/public/static/web/css/subject/*.css`, function(event){
+            forWatchCss(event.path, element, 'web');
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+
+        gulp.watch(`${_path}${element}/public/static/m/js/*.js`, function(event){
+            forWatchJs(event.path, element, 'm');
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+
+        gulp.watch(`${_path}${element}/public/static/m/css/*.css`, function(event){
+            forWatchCss(event.path, element, 'm');
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+
+        gulp.watch(`${_path}${element}/public/static/m/js/giveaways/*.js`, function(event){
+            forWatchJs(event.path, element, 'm');
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+
+        gulp.watch(`${_path}${element}/public/static/m/css/giveaways/*.css`, function(event){
+            forWatchCss(event.path, element, 'm');
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+
+        gulp.watch(`${_path}${element}/public/static/m/css/subject/*.css`, function(event){
+            forWatchCss(event.path, element, 'm');
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+        });
+
     }
 })
