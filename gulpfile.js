@@ -4,6 +4,7 @@ const
     uglify = require('gulp-uglify'),
     babel = require('gulp-babel'),
     watch = require('gulp-watch'),
+    es2015 = require("babel-preset-es2015"),
     path  = require('path');
 
 //使用说明：
@@ -16,7 +17,7 @@ const _sites = ["songmics_us","songmics_uk","songmics_fr","songmics_es","songmic
 function forJs(client){
     for (var i = 0; i < _sites.length; i++) {
         gulp.src(`${_path}${_sites[i]}/public/static/${client}/js/*.js`)
-            .pipe(babel())
+            .pipe(babel({presets:[es2015]}))
             .pipe(uglify())
             .pipe(gulp.dest(`${_path}${_sites[i]}/public/static/${client}/js/minify`));
     }
@@ -24,7 +25,7 @@ function forJs(client){
 
 function forWatchJs(path, element){
     gulp.src(path)
-        .pipe(babel())
+        .pipe(babel({presets:[es2015]}))
         .pipe(uglify())
         .pipe(gulp.dest(`${element}\\minify`));
 }
@@ -75,43 +76,42 @@ gulp.task("default", () => {
 
         watch(`${_path}${element}/public/static/web/js/*.js`, function(event){
             forWatchJs(event.path, event.dirname);
-            console.log('File ' + event.path + ' was modified, running tasks...');
+            console.log(`[${new Date().toLocaleTimeString()}] File ${event.path} was modified...`);
         });
 
         watch(`${_path}${element}/public/static/web/css/*.css`, function(event){
             forWatchCss(event.path, event.dirname);
-            console.log('File ' + event.path + ' was modified, running tasks...');
+            console.log(`[${new Date().toLocaleTimeString()}] File ${event.path} was modified...`);
         });
 
         watch(`${_path}${element}/public/static/web/css/giveaways/*.css`, function(event){
             forWatchCss(event.path, event.dirname.replace("\\giveaways", ""));
-            console.log('File ' + event.path + ' was modified, running tasks...');
+            console.log(`[${new Date().toLocaleTimeString()}] File ${event.path} was modified...`);
         });
 
         watch(`${_path}${element}/public/static/web/css/subject/*.css`, function(event){
             forWatchCss(event.path, event.dirname.replace("\\subject", ""));
-            console.log('File ' + event.path + ' was modified, running tasks...');
+            console.log(`[${new Date().toLocaleTimeString()}] File ${event.path} was modified...`);
         });
 
         watch(`${_path}${element}/public/static/m/js/*.js`, function(event){
             forWatchJs(event.path, event.dirname);
-            console.log('File ' + event.path + ' was modified, running tasks...');
+            console.log(`[${new Date().toLocaleTimeString()}] File ${event.path} was modified...`);
         });
 
         watch(`${_path}${element}/public/static/m/css/*.css`, function(event){
             forWatchCss(event.path, event.dirname);
-            console.log('File ' + event.path + ' was modified, running tasks...');
+            console.log(`[${new Date().toLocaleTimeString()}] File ${event.path} was modified...`);
         });
 
         watch(`${_path}${element}/public/static/m/css/giveaways/*.css`, function(event){
             forWatchCss(event.path, event.dirname.replace("\\giveaways", ""));
-            console.log('File ' + event.path + ' was modified, running tasks...');
+            console.log(`[${new Date().toLocaleTimeString()}] File ${event.path} was modified...`);
         });
 
         watch(`${_path}${element}/public/static/m/css/subject/*.css`, function(event){
             forWatchCss(event.path, event.dirname.replace("\\subject", ""));
-            console.log('File ' + event.path + ' was modified, running tasks...');
+            console.log(`[${new Date().toLocaleTimeString()}] File ${event.path} was modified...`);
         });
-
     }
 })
