@@ -4,20 +4,21 @@ const
     uglify = require('gulp-uglify'),
     babel = require('gulp-babel'),
     watch = require('gulp-watch'),
-    es2015 = require("babel-preset-es2015"),
-    path  = require('path');
+    path  = require('path'),
+    removeUseStrict = require("remove-use-strict-from-js");
 
 //使用说明：
 //1._path路径默认为项目所在盘的根目录（D:/   E:/）
 //2._sites为项目目录集合
 
-const _path = path.resolve(__dirname, '..') + '/';
-const _sites = ["songmics_us","songmics_uk","songmics_fr","songmics_es","songmics_it","songmics_de","songmics_jp"];
+const _path = path.resolve(__dirname, '..') + '/www/';
+const _sites = ["songmics_us","songmics_uk","songmics_fr","songmics_es","songmics_it","songmics_de","songmics_jp","songmics_ca"];
 
 function forJs(client){
     for (var i = 0; i < _sites.length; i++) {
         gulp.src(`${_path}${_sites[i]}/public/static/${client}/js/*.js`)
-            .pipe(babel({presets:[es2015]}))
+            .pipe(babel({presets: ['@babel/env']}))
+            .pipe(removeUseStrict())
             .pipe(uglify())
             .pipe(gulp.dest(`${_path}${_sites[i]}/public/static/${client}/js/minify`));
     }
@@ -25,7 +26,8 @@ function forJs(client){
 
 function forWatchJs(path, element){
     gulp.src(path)
-        .pipe(babel({presets:[es2015]}))
+        .pipe(babel({presets: ['@babel/env']}))
+        .pipe(removeUseStrict())
         .pipe(uglify())
         .pipe(gulp.dest(`${element}\\minify`));
 }
